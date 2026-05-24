@@ -1,75 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OldPain2Go Brand Assets</title>
+  <title>OldPain2Go &middot; Brand Assets</title>
+  <meta name="description" content="Public hosting for OldPain2Go email signature and brand assets.">
   <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="favicon.ico">
   <style>
     :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #232323;
-      --muted: #6a6a6a;
-      --brand: #0a47b7;
-      --border: #e3e6eb;
-      --code-bg: #f1f3f6;
+      --bg: #0A1330;
+      --bg-soft: rgba(255,255,255,0.04);
+      --gold: #D4A437;
+      --gold-light: #E8C158;
+      --gold-faint: rgba(212,164,55,0.22);
+      --text: #F4F2EB;
+      --text-muted: rgba(244,242,235,0.65);
+      --blue: #7eb0e0;
+      --blue-bright: #c8dcf0;
+      --code-bg: rgba(255,255,255,0.06);
     }
     * { box-sizing: border-box; }
+    html { min-height: 100vh; background: var(--bg); }
     body {
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.5;
+      min-height: 100vh;
     }
-    .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 28px; margin: 0 0 8px; color: var(--brand); }
-    .lead { color: var(--muted); margin: 0 0 4px; font-size: 15px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+    header { margin-bottom: 36px; text-align: center; }
+    h1 {
+      font-family: "Iowan Old Style", Palatino, Georgia, serif;
+      font-style: italic;
+      font-size: 36px;
+      margin: 0 0 8px;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    }
+    .lead {
+      color: var(--text-muted);
+      margin: 0;
+      font-size: 15px;
+    }
     .intro {
-      background: var(--card);
-      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      border: 1px solid var(--gold-faint);
       border-radius: 8px;
-      padding: 16px 20px;
-      margin-bottom: 24px;
+      padding: 18px 22px;
+      margin-bottom: 32px;
       font-size: 14px;
+      color: var(--text);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.22);
     }
-    .intro strong { color: var(--brand); }
+    .intro strong { color: var(--gold-light); }
     .intro code {
       background: var(--code-bg);
       padding: 2px 6px;
       border-radius: 4px;
       font-family: SFMono-Regular, Menlo, Monaco, monospace;
       font-size: 13px;
+      color: var(--blue-bright);
+    }
+    h2 {
+      font-family: "Iowan Old Style", Palatino, Georgia, serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--gold-light);
+      margin: 36px 0 14px;
+      letter-spacing: 0.01em;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-family: Menlo, Consolas, monospace;
+      margin: 0 0 8px 4px;
+      font-weight: 600;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
     }
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      background: var(--bg-soft);
+      border: 1px solid var(--gold-faint);
+      border-radius: 10px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.22), 0 -2px 10px rgba(0,0,0,0.11);
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(212,164,55,0.55);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.32), 0 -2px 10px rgba(0,0,0,0.13);
     }
     .thumb {
-      background: #fafbfc;
-      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      padding: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 140px;
-      border-bottom: 1px solid var(--border);
+      min-height: 150px;
+      border-bottom: 1px solid var(--gold-faint);
     }
-    .thumb img { max-width: 100%; max-height: 160px; height: auto; }
-    .meta { padding: 14px 16px; }
-    .name { font-weight: 600; font-size: 14px; margin: 0 0 4px; }
-    .purpose { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+    .thumb img { max-width: 100%; max-height: 170px; height: auto; }
+    .meta { padding: 16px 18px; }
+    .name { font-weight: 600; font-size: 15px; margin: 0 0 4px; color: var(--text); }
+    .purpose { color: var(--text-muted); font-size: 13px; margin: 0 0 14px; }
     .url-row {
       display: flex;
       gap: 6px;
@@ -80,53 +127,58 @@
       min-width: 0;
       font-family: SFMono-Regular, Menlo, Monaco, monospace;
       font-size: 12px;
-      padding: 8px 10px;
+      padding: 9px 11px;
       background: var(--code-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      color: var(--text);
+      border: 1px solid var(--gold-faint);
+      border-radius: 5px;
+      color: var(--blue-bright);
     }
+    .url-row input:focus { outline: none; border-color: var(--gold); }
     .url-row button {
-      background: var(--brand);
-      color: #fff;
+      background: var(--gold);
+      color: var(--bg);
       border: 0;
-      padding: 8px 12px;
+      padding: 9px 14px;
       font-size: 13px;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
-      font-weight: 500;
+      font-weight: 600;
+      transition: background 0.18s;
     }
-    .url-row button:hover { background: #0838a0; }
-    .url-row button.copied { background: #2ea043; }
+    .url-row button:hover { background: var(--gold-light); }
+    .url-row button.copied { background: #2ea043; color: #fff; }
     .footer {
-      margin-top: 32px;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--gold-faint);
       font-size: 13px;
-      color: var(--muted);
+      color: var(--text-muted);
       text-align: center;
     }
-    .footer a { color: var(--brand); text-decoration: none; }
-    h2 { font-size: 18px; color: var(--text); margin: 32px 0 12px; }
+    .footer a { color: var(--gold); text-decoration: none; }
+    .footer a:hover { color: var(--gold-light); }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>OldPain2Go Brand Assets</h1>
-      <p class="lead">Central reference for image URLs used in customer emails and other team materials.</p>
+      <p class="lead">Central reference for image URLs used in customer emails and team materials.</p>
     </header>
 
     <div class="intro">
-      <strong>How to use:</strong> When composing a customer email in FreeScout, click <em>Insert Image</em> &rarr; paste the URL below into the <em>Image URL</em> field (not Choose files). The image renders inline for the customer with no broken icons and no attachment chips in their inbox.
+      <strong>How to use:</strong> When composing an email in FreeScout, click <em>Insert Image</em> &rarr; paste the URL below into the <em>Image URL</em> field (not Choose files). The image renders inline for the customer with no broken icons and no attachment chips in their inbox.
     </div>
 
-    <h2>Signature assets</h2>
+    <p class="section-label">Signature</p>
+    <h2>Email signature graphic</h2>
     <div class="grid">
 
       <div class="card">
         <div class="thumb"><img src="op2go-cpd-badge.png" alt="OP2Go + CPD badge"></div>
         <div class="meta">
           <p class="name">OP2Go + CPD badge</p>
-          <p class="purpose">Combined OldPain2Go &amp; CPD Accredited badge — main signature graphic, 300px wide</p>
+          <p class="purpose">Combined OldPain2Go &amp; CPD Accredited badge, 300px wide. Used in signature.</p>
           <div class="url-row">
             <input type="text" readonly value="https://assets.oldpain2go.com/op2go-cpd-badge.png" onclick="this.select()">
             <button onclick="copyUrl(this)">Copy</button>
@@ -134,23 +186,17 @@
         </div>
       </div>
 
-      <div class="card">
-        <div class="thumb"><img src="op2go-team-logo.png" alt="OP2Go team logo"></div>
-        <div class="meta">
-          <p class="name">OP2Go team logo</p>
-          <p class="purpose">Round Steven Blake's OldPain2Go® submark with gold border — for emails, documents, social posts</p>
-          <div class="url-row">
-            <input type="text" readonly value="https://assets.oldpain2go.com/op2go-team-logo.png" onclick="this.select()">
-            <button onclick="copyUrl(this)">Copy</button>
-          </div>
-        </div>
-      </div>
+    </div>
+
+    <p class="section-label" style="margin-top: 40px;">Signature &amp; social media</p>
+    <h2>Social platform icons</h2>
+    <div class="grid">
 
       <div class="card">
         <div class="thumb"><img src="facebook.png" alt="Facebook"></div>
         <div class="meta">
           <p class="name">Facebook icon</p>
-          <p class="purpose">32&times;32 social icon for signature</p>
+          <p class="purpose">32&times;32 social icon. In signature, also for any Facebook reference.</p>
           <div class="url-row">
             <input type="text" readonly value="https://assets.oldpain2go.com/facebook.png" onclick="this.select()">
             <button onclick="copyUrl(this)">Copy</button>
@@ -162,7 +208,7 @@
         <div class="thumb"><img src="instagram.png" alt="Instagram"></div>
         <div class="meta">
           <p class="name">Instagram icon</p>
-          <p class="purpose">32&times;32 social icon for signature</p>
+          <p class="purpose">32&times;32 social icon. In signature, also for any Instagram reference.</p>
           <div class="url-row">
             <input type="text" readonly value="https://assets.oldpain2go.com/instagram.png" onclick="this.select()">
             <button onclick="copyUrl(this)">Copy</button>
@@ -174,7 +220,7 @@
         <div class="thumb"><img src="linkedin.png" alt="LinkedIn"></div>
         <div class="meta">
           <p class="name">LinkedIn icon</p>
-          <p class="purpose">32&times;32 social icon for signature</p>
+          <p class="purpose">32&times;32 social icon. In signature, also for any LinkedIn reference.</p>
           <div class="url-row">
             <input type="text" readonly value="https://assets.oldpain2go.com/linkedin.png" onclick="this.select()">
             <button onclick="copyUrl(this)">Copy</button>
@@ -186,7 +232,7 @@
         <div class="thumb"><img src="youtube.png" alt="YouTube"></div>
         <div class="meta">
           <p class="name">YouTube icon</p>
-          <p class="purpose">32&times;32 social icon for signature</p>
+          <p class="purpose">32&times;32 social icon. In signature, also for any YouTube reference.</p>
           <div class="url-row">
             <input type="text" readonly value="https://assets.oldpain2go.com/youtube.png" onclick="this.select()">
             <button onclick="copyUrl(this)">Copy</button>
@@ -196,8 +242,26 @@
 
     </div>
 
+    <p class="section-label" style="margin-top: 40px;">Team work</p>
+    <h2>Logos and brand graphics</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="thumb"><img src="op2go-team-logo.png" alt="OP2Go team logo"></div>
+        <div class="meta">
+          <p class="name">OP2Go team logo</p>
+          <p class="purpose">Round Steven Blake's OldPain2Go&reg; submark with gold border. For documents, slides, social posts, anywhere we need the brand.</p>
+          <div class="url-row">
+            <input type="text" readonly value="https://assets.oldpain2go.com/op2go-team-logo.png" onclick="this.select()">
+            <button onclick="copyUrl(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <p class="footer">
-      To request a new asset, ask Tony to add it &mdash; new assets land here within minutes and the URL is ready to use immediately.<br>
+      To add a new asset, ask Tony. New assets land here within minutes and the URL is ready to use immediately.<br>
       Source repo: <a href="https://github.com/OldPain2Go/email-assets">github.com/OldPain2Go/email-assets</a>
     </p>
   </div>
