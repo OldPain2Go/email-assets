@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OldPain2Go Brand Assets</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #232323;
+      --muted: #6a6a6a;
+      --brand: #0a47b7;
+      --border: #e3e6eb;
+      --code-bg: #f1f3f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+    header { margin-bottom: 28px; }
+    h1 { font-size: 28px; margin: 0 0 8px; color: var(--brand); }
+    .lead { color: var(--muted); margin: 0 0 4px; font-size: 15px; }
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    .intro strong { color: var(--brand); }
+    .intro code {
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: SFMono-Regular, Menlo, Monaco, monospace;
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .thumb {
+      background: #fafbfc;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+      border-bottom: 1px solid var(--border);
+    }
+    .thumb img { max-width: 100%; max-height: 160px; height: auto; }
+    .meta { padding: 14px 16px; }
+    .name { font-weight: 600; font-size: 14px; margin: 0 0 4px; }
+    .purpose { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+    .url-row {
+      display: flex;
+      gap: 6px;
+      align-items: stretch;
+    }
+    .url-row input {
+      flex: 1;
+      min-width: 0;
+      font-family: SFMono-Regular, Menlo, Monaco, monospace;
+      font-size: 12px;
+      padding: 8px 10px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+    }
+    .url-row button {
+      background: var(--brand);
+      color: #fff;
+      border: 0;
+      padding: 8px 12px;
+      font-size: 13px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .url-row button:hover { background: #0838a0; }
+    .url-row button.copied { background: #2ea043; }
+    .footer {
+      margin-top: 32px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .footer a { color: var(--brand); text-decoration: none; }
+    h2 { font-size: 18px; color: var(--text); margin: 32px 0 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OldPain2Go Brand Assets</h1>
+      <p class="lead">Central reference for image URLs used in customer emails and other team materials.</p>
+    </header>
+
+    <div class="intro">
+      <strong>How to use:</strong> When composing a customer email in FreeScout, click <em>Insert Image</em> &rarr; paste the URL below into the <em>Image URL</em> field (not Choose files). The image renders inline for the customer with no broken icons and no attachment chips in their inbox.
+    </div>
+
+    <h2>Signature assets</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="thumb"><img src="op2go-cpd-badge.png" alt="OP2Go + CPD badge"></div>
+        <div class="meta">
+          <p class="name">OP2Go + CPD badge</p>
+          <p class="purpose">Combined OldPain2Go &amp; CPD Accredited badge — main signature graphic, 300px wide</p>
+          <div class="url-row">
+            <input type="text" readonly value="https://assets.oldpain2go.com/op2go-cpd-badge.png" onclick="this.select()">
+            <button onclick="copyUrl(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="facebook.png" alt="Facebook"></div>
+        <div class="meta">
+          <p class="name">Facebook icon</p>
+          <p class="purpose">32&times;32 social icon for signature</p>
+          <div class="url-row">
+            <input type="text" readonly value="https://assets.oldpain2go.com/facebook.png" onclick="this.select()">
+            <button onclick="copyUrl(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="instagram.png" alt="Instagram"></div>
+        <div class="meta">
+          <p class="name">Instagram icon</p>
+          <p class="purpose">32&times;32 social icon for signature</p>
+          <div class="url-row">
+            <input type="text" readonly value="https://assets.oldpain2go.com/instagram.png" onclick="this.select()">
+            <button onclick="copyUrl(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="linkedin.png" alt="LinkedIn"></div>
+        <div class="meta">
+          <p class="name">LinkedIn icon</p>
+          <p class="purpose">32&times;32 social icon for signature</p>
+          <div class="url-row">
+            <input type="text" readonly value="https://assets.oldpain2go.com/linkedin.png" onclick="this.select()">
+            <button onclick="copyUrl(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb"><img src="youtube.png" alt="YouTube"></div>
+        <div class="meta">
+          <p class="name">YouTube icon</p>
+          <p class="purpose">32&times;32 social icon for signature</p>
+          <div class="url-row">
+            <input type="text" readonly value="https://assets.oldpain2go.com/youtube.png" onclick="this.select()">
+            <button onclick="copyUrl(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer">
+      To request a new asset, ask Tony to add it &mdash; new assets land here within minutes and the URL is ready to use immediately.<br>
+      Source repo: <a href="https://github.com/OldPain2Go/email-assets">github.com/OldPain2Go/email-assets</a>
+    </p>
+  </div>
+
+  <script>
+    function copyUrl(btn) {
+      var input = btn.previousElementSibling;
+      input.select();
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(input.value).then(function () {
+        var orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = orig;
+          btn.classList.remove('copied');
+        }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
