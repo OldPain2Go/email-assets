@@ -9,16 +9,16 @@
   <link rel="icon" href="favicon.ico">
   <style>
     :root {
-      --bg: #0A1330;
-      --bg-soft: rgba(255,255,255,0.04);
+      --bg: #ffffff;
+      --bg-soft: #fafbfc;
+      --navy: #0A1330;
+      --navy-soft: rgba(10,19,48,0.65);
       --gold: #D4A437;
       --gold-light: #E8C158;
-      --gold-faint: rgba(212,164,55,0.22);
-      --text: #F4F2EB;
-      --text-muted: rgba(244,242,235,0.65);
-      --blue: #7eb0e0;
-      --blue-bright: #c8dcf0;
-      --code-bg: rgba(255,255,255,0.06);
+      --gold-faint: rgba(212,164,55,0.30);
+      --border: #e3e6eb;
+      --code-bg: #f1f3f6;
+      --code-text: #0A1330;
     }
     * { box-sizing: border-box; }
     html { min-height: 100vh; background: var(--bg); }
@@ -27,7 +27,7 @@
       padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
-      color: var(--text);
+      color: var(--navy);
       line-height: 1.5;
       min-height: 100vh;
     }
@@ -36,53 +36,58 @@
     h1 {
       font-family: "Iowan Old Style", Palatino, Georgia, serif;
       font-style: italic;
-      font-size: 36px;
-      margin: 0 0 8px;
-      color: var(--gold);
+      font-size: 38px;
+      margin: 0 0 6px;
+      color: var(--navy);
       letter-spacing: 0.01em;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+      font-weight: 600;
+    }
+    h1 .dot {
+      color: var(--gold);
+      margin: 0 12px;
+      font-weight: 400;
     }
     .lead {
-      color: var(--text-muted);
+      color: var(--navy-soft);
       margin: 0;
       font-size: 15px;
     }
     .intro {
       background: var(--bg-soft);
-      border: 1px solid var(--gold-faint);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
       border-radius: 8px;
       padding: 18px 22px;
       margin-bottom: 32px;
       font-size: 14px;
-      color: var(--text);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+      color: var(--navy);
     }
-    .intro strong { color: var(--gold-light); }
+    .intro strong { color: var(--gold); }
     .intro code {
       background: var(--code-bg);
       padding: 2px 6px;
       border-radius: 4px;
       font-family: SFMono-Regular, Menlo, Monaco, monospace;
       font-size: 13px;
-      color: var(--blue-bright);
     }
     h2 {
       font-family: "Iowan Old Style", Palatino, Georgia, serif;
       font-style: italic;
-      font-size: 22px;
-      color: var(--gold-light);
+      font-size: 24px;
+      color: var(--navy);
       margin: 36px 0 14px;
       letter-spacing: 0.01em;
+      font-weight: 600;
     }
     .section-label {
       display: inline-block;
       font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--blue);
+      color: var(--gold);
       font-family: Menlo, Consolas, monospace;
-      margin: 0 0 8px 4px;
-      font-weight: 600;
+      margin: 0 0 4px 4px;
+      font-weight: 700;
     }
     .grid {
       display: grid;
@@ -90,33 +95,33 @@
       gap: 18px;
     }
     .card {
-      background: var(--bg-soft);
-      border: 1px solid var(--gold-faint);
+      background: var(--bg);
+      border: 1px solid var(--border);
       border-radius: 10px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.22), 0 -2px 10px rgba(0,0,0,0.11);
+      box-shadow: 0 2px 8px rgba(10,19,48,0.06), 0 1px 3px rgba(10,19,48,0.04);
       transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
     }
     .card:hover {
       transform: translateY(-2px);
-      border-color: rgba(212,164,55,0.55);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.32), 0 -2px 10px rgba(0,0,0,0.13);
+      border-color: var(--gold-faint);
+      box-shadow: 0 8px 20px rgba(10,19,48,0.10), 0 2px 6px rgba(10,19,48,0.06);
     }
     .thumb {
-      background: rgba(255,255,255,0.05);
+      background: var(--bg-soft);
       padding: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 150px;
-      border-bottom: 1px solid var(--gold-faint);
+      border-bottom: 1px solid var(--border);
     }
     .thumb img { max-width: 100%; max-height: 170px; height: auto; }
     .meta { padding: 16px 18px; }
-    .name { font-weight: 600; font-size: 15px; margin: 0 0 4px; color: var(--text); }
-    .purpose { color: var(--text-muted); font-size: 13px; margin: 0 0 14px; }
+    .name { font-weight: 600; font-size: 15px; margin: 0 0 4px; color: var(--navy); }
+    .purpose { color: var(--navy-soft); font-size: 13px; margin: 0 0 14px; }
     .url-row {
       display: flex;
       gap: 6px;
@@ -129,14 +134,14 @@
       font-size: 12px;
       padding: 9px 11px;
       background: var(--code-bg);
-      border: 1px solid var(--gold-faint);
+      border: 1px solid var(--border);
       border-radius: 5px;
-      color: var(--blue-bright);
+      color: var(--code-text);
     }
     .url-row input:focus { outline: none; border-color: var(--gold); }
     .url-row button {
-      background: var(--gold);
-      color: var(--bg);
+      background: var(--navy);
+      color: #fff;
       border: 0;
       padding: 9px 14px;
       font-size: 13px;
@@ -145,24 +150,24 @@
       font-weight: 600;
       transition: background 0.18s;
     }
-    .url-row button:hover { background: var(--gold-light); }
+    .url-row button:hover { background: var(--gold); color: var(--navy); }
     .url-row button.copied { background: #2ea043; color: #fff; }
     .footer {
       margin-top: 48px;
       padding-top: 24px;
-      border-top: 1px solid var(--gold-faint);
+      border-top: 1px solid var(--border);
       font-size: 13px;
-      color: var(--text-muted);
+      color: var(--navy-soft);
       text-align: center;
     }
-    .footer a { color: var(--gold); text-decoration: none; }
-    .footer a:hover { color: var(--gold-light); }
+    .footer a { color: var(--gold); text-decoration: none; font-weight: 500; }
+    .footer a:hover { color: var(--navy); }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>OldPain2Go Brand Assets</h1>
+      <h1>OldPain2Go<span class="dot">&middot;</span>Brand Assets</h1>
       <p class="lead">Central reference for image URLs used in customer emails and team materials.</p>
     </header>
 
