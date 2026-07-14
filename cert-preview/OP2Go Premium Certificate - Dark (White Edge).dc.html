@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#ffffff;}
+  a{color:#c9952d;text-decoration:none;}
+  a:hover{color:#e6bf6a;}
+</style>
+</helmet>
+
+<div data-screen-label="Dark - white edge" style="position:relative; width:1400px; height:990px; overflow:hidden; font-family:'Source Sans 3','Helvetica Neue',Arial,sans-serif; -webkit-font-smoothing:antialiased; background:#ffffff;">
+
+  <!-- navy artwork field, inset by the white margin -->
+  <div style="position:absolute; inset:{{ edgePx }}; overflow:hidden; border-radius:{{ innerRadiusPx }}; background:radial-gradient(130% 95% at 50% -5%, #1a2f63 0%, #11214a 42%, #0a1330 100%);">
+
+    <!-- inner gold frame -->
+    <div style="position:absolute; inset:0; border:1.6px solid {{ accent }}; border-radius:{{ innerRadiusPx }}; box-shadow:0 0 0 1px rgba(212,164,55,0.10), inset 0 0 60px rgba(10,19,48,0.35); pointer-events:none; z-index:5;"></div>
+
+    <!-- CPD accreditation seal -->
+    <img src="cert-assets/1d960ae8-91fe-416a-952c-4d246807a836.png" alt="Accredited CPD Event — The CPD Standards Office, CPD Provider 41236, 2026-2027" style="position:absolute; bottom:22px; right:46px; width:208px; height:auto; z-index:3; pointer-events:none;">
+
+    <!-- OldPain2Go logo -->
+    <img src="cert-assets/bf844f6e-4929-46fc-acf0-7e61a88f017a.png" alt="Steven Blake's OldPain2Go — Chronic Pain Release Therapy" style="position:absolute; bottom:30px; left:30px; width:410px; height:auto; z-index:3; pointer-events:none;">
+
+    <!-- JoyHope watermark (baked image, was a file-masked div that Chrome blocks over file://) -->
+    <img src="cert-assets/watermark-joyhope-dark.png" alt="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:820px; height:820px; opacity:0.22; z-index:1; pointer-events:none;">
+
+    <!-- content -->
+    <div style="position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:3% 5%;">
+      <div style="flex:none; font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:70px; line-height:1.1; color:#f4f2eb; letter-spacing:0.14em; text-transform:uppercase; margin:0 0 4px;">Certificate</div>
+      <div style="flex:none; font-size:28px; font-weight:600; text-transform:uppercase; letter-spacing:0.32em; color:{{ accent }}; margin-bottom:20px;">Of Completion</div>
+      <div style="flex:none; font-weight:400; font-size:21px; letter-spacing:0.02em; color:#aeb9d1; margin-bottom:8px; white-space:nowrap;">This Certificate is Presented to</div>
+      <div style="flex:none; font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-weight:700; font-size:58px; line-height:1.18; color:#f4f2eb; margin-bottom:8px;">Your Name</div>
+      <hr style="flex:none; width:260px; height:2px; border:0; background:{{ dividerBg }}; margin:0 0 12px 0;">
+      <div style="flex:none; font-weight:400; font-size:22px; letter-spacing:0.02em; color:#aeb9d1; margin-bottom:8px; white-space:nowrap;">for Successfully Completing the</div>
+      <div style="flex:none; font-weight:700; font-size:38px; line-height:1.15; color:#f4f2eb; white-space:nowrap; margin-bottom:14px;">OldPain2Go<span style="font-size:0.62em; vertical-align:super;">&reg;</span> Certified Practitioner Training</div>
+      <div style="flex:none; font-weight:400; font-size:20px; letter-spacing:0.02em; color:#aeb9d1; margin-bottom:20px; white-space:nowrap;">Certificate No: <span style="font-weight:700; color:#f4f2eb;">0123456</span>&nbsp;&nbsp;&middot;&nbsp;&nbsp;Accredited: <span style="font-weight:700; color:#f4f2eb;">CPD hours</span></div>
+
+      <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:22px;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+          <img src="cert-assets/d060631a-5979-482d-9bff-0758b6318b68.svg" alt="Trudy Blake signature" style="display:block; width:{{ sigWidthPx }}; height:auto; opacity:0.9;">
+          <hr style="width:230px; height:1px; border:0; background:{{ dividerBg }}; margin:0;">
+          <div style="font-weight:400; font-size:17px; letter-spacing:0.04em; color:#9aa6c0;">Director of Certification</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <div style="font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-weight:500; font-size:30px; line-height:1.2; color:#f4f2eb;">13 June 2026</div>
+          <hr style="width:230px; height:1px; border:0; background:{{ dividerBg }}; margin:0;">
+          <div style="font-weight:400; font-size:17px; letter-spacing:0.04em; color:#9aa6c0;">Date Awarded</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- outer gold line, drawn on the white margin -->
+  <div style="position:absolute; inset:20px; border:0.75px solid #c9952d; border-radius:28px; pointer-events:none; z-index:6;"></div>
+
+  <!-- ribbon + rosette, above the white edge, reaching the page edge -->
+  <img src="cert-assets/21759c70-d708-488d-814a-e2275ce2c29c.svg" alt="Award ribbon" style="position:absolute; top:-34px; left:70px; width:232px; height:auto; z-index:8; pointer-events:none;">
+  <img src="cert-assets/f2801e35-f0b5-4c30-a42d-982a2c8afc72.png" alt="" style="position:absolute; top:130px; left:132px; width:120px; height:120px; z-index:9; opacity:0.92; pointer-events:none;">
+</div>
+</x-dc>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#ffffff"/>
+    <rect x="20" y="20" width="60" height="60" rx="6" fill="#11214a"/>
+    <text x="50" y="58" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#e6bf6a" text-anchor="middle">OP</text>
+  </svg>
+</template>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1400, &quot;height&quot;: 990 },
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#d4a437&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Style&quot;, &quot;options&quot;: [&quot;#d4a437&quot;, &quot;#e6bf6a&quot;, &quot;#c9952d&quot;, &quot;#a87a1f&quot;] },
+  &quot;edgeWidth&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 43, &quot;min&quot;: 0, &quot;max&quot;: 80, &quot;step&quot;: 1, &quot;unit&quot;: &quot;px&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Style&quot; },
+  &quot;sigWidth&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 290, &quot;min&quot;: 180, &quot;max&quot;: 400, &quot;step&quot;: 2, &quot;unit&quot;: &quot;px&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Signature&quot; },
+  &quot;wmOpacity&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 0.22, &quot;min&quot;: 0, &quot;max&quot;: 0.6, &quot;step&quot;: 0.02, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Style&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#d4a437';
+    const soft = '#e6bf6a';
+    const sigWidth = this.props.sigWidth ?? 290;
+    const wmOpacity = this.props.wmOpacity ?? 0.22;
+    const edge = this.props.edgeWidth ?? 43;
+    return {
+      accent, wmOpacity,
+      edgePx: edge + 'px',
+      innerRadiusPx: Math.max(20 + (44 - edge), 6) + 'px',
+      sigWidthPx: sigWidth + 'px',
+      dividerBg: `linear-gradient(90deg, rgba(201,149,45,0) 0%, ${accent} 20%, ${soft} 50%, ${accent} 80%, rgba(201,149,45,0) 100%)`
+    };
+  }
+}
+</script>
+</body>
+</html>
