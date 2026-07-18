@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OP2Go Certificate — Prodigi Foil Preview (V3)</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+         background:#12151c; color:#e9ecf2; padding:24px; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  p.sub { margin:0 0 20px; color:#9aa6be; }
+  .legend { background:#1b202b; border:1px solid #2b3240; border-radius:10px; padding:14px 18px; margin-bottom:22px; }
+  .legend b { color:#00c4a0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(440px,1fr)); gap:22px; }
+  .card { background:#1b202b; border:1px solid #2b3240; border-radius:12px; overflow:hidden; }
+  .card h2 { font-size:15px; margin:0; padding:12px 16px; background:#222836; border-bottom:1px solid #2b3240; }
+  .imgwrap { background:#0c0e13; display:flex; align-items:center; justify-content:center; }
+  .imgwrap img { width:100%; height:auto; display:none; }
+  .imgwrap img.on { display:block; }
+  .tabs { display:flex; flex-wrap:wrap; gap:6px; padding:10px 16px; }
+  .tabs button { font:13px inherit; color:#cdd5e5; background:#2a3140; border:1px solid #39415280;
+                 border-radius:7px; padding:6px 12px; cursor:pointer; }
+  .tabs button.on { background:#00c4a0; color:#08110f; font-weight:600; border-color:#00c4a0; }
+  .note { padding:10px 16px 16px; color:#9aa6be; font-size:13px; }
+</style></head><body>
+<h1>OP2Go Certificate — Prodigi Foil Print Files (V3)</h1>
+<p class="sub">Both editions, identical foil treatment. Files are transparent PNG, 3508×2480 @ 300&nbsp;dpi.</p>
+<div class="legend">
+  <b>Foil map</b> paints every foil area in teal over the design — so anything <i>not</i> teal prints as
+  ink. Confirm: the white/light background, the white borders, the CPD seal and all body text are
+  <b>not</b> teal (they print white/colour, never foil). Foil = frame lines, “Of Completion”, “Your Name”,
+  the dividers, the signature, the medal disc + splines, the strap gold trim, and the logo gold
+  (“Release”, “OldPain2Go”). The Joy emblem is carved out of the disc so it prints on the shiny foil.
+</div>
+<div class="grid" id="grid"></div>
+<script>
+  const VIEWS = [["foilmap","What becomes foil"],["foilsim","Foil simulation"],["medal","Medal close-up"],["cutview","Cut view"],["original","Original design"]];
+  const EDS = [["dark","Dark edition"],["light","Light edition"]];
+  const grid = document.getElementById('grid');
+  for (const [ed,title] of EDS){
+    const card=document.createElement('div'); card.className='card';
+    let tabs='<div class="tabs">'; let imgs='<div class="imgwrap">';
+    VIEWS.forEach(([v,label],i)=>{
+      tabs+=`<button data-ed="${ed}" data-v="${v}" class="${i===0?'on':''}">${label}</button>`;
+      imgs+=`<img id="${ed}-${v}" class="${i===0?'on':''}" src="${ed}-${v}.png" alt="${ed} ${label}">`;
+    });
+    tabs+='</div>'; imgs+='</div>';
+    card.innerHTML=`<h2>${title}</h2>${imgs}${tabs}<div class="note">Toggle the views. “What becomes foil” is the proof view for the white areas.</div>`;
+    grid.appendChild(card);
+  }
+  grid.addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    const ed=b.dataset.ed, v=b.dataset.v;
+    b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+    document.querySelectorAll(`[id^="${ed}-"]`).forEach(img=>img.classList.toggle('on',img.id===`${ed}-${v}`));
+  });
+</script>
+</body></html>
